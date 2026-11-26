@@ -154,7 +154,6 @@
     "Moving existing Neo4j applications to a smaller footprint"
   ],
   "notIdealFor": [
-    "Graphs that must be sharded across many machines today",
     "RDF/SPARQL workloads",
     "Teams that require an open-source server"
   ],
