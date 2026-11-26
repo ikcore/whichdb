@@ -137,7 +137,7 @@
     "GIS built in: WGS-84 points plus geometry and geography shapes from WKT, WKB and GeoJSON, with spatial indexes and shortest-path routing",
     "Nebula Cluster (early access) adds high availability with automatic failover; apps keep their Bolt driver and bolt:// address",
     "Feature-rich out of the box: vector search, FastRP, graph algorithms, APOC, change streams, a scheduler and an MCP server, no plugins",
-    "Cypher over Bolt: existing Bolt drivers and tools connect, and Neo4j 4.x/5.x .dump files import directly",
+    "Cypher over Bolt, so existing Bolt drivers and tools connect, plus open source drivers in seven languages",
     "Container image of about 5 MB for Linux AMD64 and ARM64; the free Community edition runs in production with no licence key"
   ],
   "weaknesses": [
