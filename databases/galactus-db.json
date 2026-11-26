@@ -5,8 +5,8 @@
     "GDB",
     "GalactusDB"
   ],
-  "tagline": "The frontier database: graphs, SQL tables and vector search in one Rust server, speaking Cypher over Bolt.",
-  "description": "Galactus DB is a frontier database: graphs, SQL tables and vector search in one server, built to what the hardware allows. It challenges the idea that a scalable database has to be heavyweight, expensive or spread across services: one container image of about 5 MB holds a property-graph engine written in Rust that speaks Cypher over Bolt, typed SQL tables on nodes and relationships (joins, window functions, recursive CTEs) in the same transaction as the graph, and vector, full-text and spatial indexes. Graph algorithms, APOC utilities, change streams, a scheduler, users and roles, TLS and an MCP server for AI agents come out of the box, with no plugins. In its open benchmark against five other graph databases it is the fastest in its class on every query measured, from point lookups to weighted shortest paths. Instances run on one server with read replicas, and Nebula Cluster (early access) adds high availability, automatic failover and property sharding. The free Community edition is licensed for production; Commercial and Enterprise are sold per core.",
+  "tagline": "Rust frontier database combining a Cypher property graph, vector search and typed SQL tables in one server.",
+  "description": "Galactus DB is a frontier database that puts a property graph, vector search and typed SQL tables in one Rust server, and it questions the assumption that scaling needs heavyweight, multi-service infrastructure. A single container image of about 5 MB speaks Cypher over Bolt and stores SQL tables on nodes and relationships, queried with joins, window functions and recursive CTEs in the same transaction as the graph. Vector, full-text and spatial indexes, graph algorithms, APOC utilities, change streams, a scheduler, roles, TLS and an MCP server for AI agents ship in the box without plugins. Its open benchmark against five other graph databases puts it fastest in its class on every query measured, from point lookups to weighted shortest paths. Instances run on one server with read replicas, Nebula Cluster (early access) adds high availability, automatic failover and property sharding, and the free Community edition is licensed for production, with Commercial and Enterprise sold per core.",
   "productType": "engine",
   "status": "active",
   "maturity": "emerging",
@@ -138,7 +138,7 @@
     "Nebula Cluster (early access) adds high availability with automatic failover; apps keep their Bolt driver and bolt:// address",
     "Feature-rich out of the box: vector search, FastRP, graph algorithms, APOC, change streams, a scheduler and an MCP server, no plugins",
     "Cypher over Bolt, so existing Bolt drivers and tools connect, plus open source drivers in seven languages",
-    "Container image of about 5 MB for Linux AMD64 and ARM64; the free Community edition runs in production with no licence key"
+    "Container image of about 5 MB for Linux AMD64 and ARM64; Community is free and licensed for production use, with no key"
   ],
   "weaknesses": [
     "The server is closed source; only the drivers are open source (Apache-2.0)",
