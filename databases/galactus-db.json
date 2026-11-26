@@ -132,20 +132,18 @@
     "wasm": false
   },
   "strengths": [
-    "Graph, typed SQL tables and vector search in one engine, queried together in one Cypher statement and one transaction",
+    "Typed SQL tables on nodes and relationships, queried with SQL (joins, window functions, recursive CTEs) inside Cypher in the same transaction",
+    "GIS built in: WGS-84 points plus geometry and geography shapes from WKT, WKB and GeoJSON, with spatial indexes and shortest-path routing",
+    "Nebula Cluster (early access) adds high availability with automatic failover; apps keep their Bolt driver and bolt:// address",
+    "Vector search, FastRP embeddings and an MCP server for GraphRAG and AI agents, all in the same engine as the graph",
     "Bolt and Cypher: official Neo4j drivers connect, and Neo4j 4.x/5.x .dump files import without a Neo4j install",
-    "Container image of about 5 MB for Linux AMD64 and ARM64",
-    "Built-in GDS-style algorithms, APOC utilities, FastRP embeddings and a constraint-based scheduler (gdb.schedule)",
-    "MCP server lets AI agents query the database under the roles you grant them",
-    "Change streams, subscriptions with label and property triggers, and read replicas on the same or another server",
-    "Free Community edition runs in production with no account or licence key"
+    "Built-in GDS-style algorithms, APOC utilities, change streams and a constraint-based scheduler (gdb.schedule)",
+    "Container image of about 5 MB for Linux AMD64 and ARM64; the free Community edition runs in production with no licence key"
   ],
   "weaknesses": [
     "The server is closed source; only the drivers are open source (Apache-2.0)",
     "Young project with a small community and few third-party tools beyond the Neo4j ecosystem",
-    "One writer per database at a time, so many concurrent writers queue",
-    "Released instances scale up, not out: the cluster edition is in early access",
-    "Cypher coverage differs from Neo4j in places, so some queries need changes when migrating"
+    "Released instances scale up, not out: the cluster edition is in early access"
   ],
   "useCases": [
     "GraphRAG and agent memory",
@@ -157,7 +155,6 @@
   ],
   "notIdealFor": [
     "Graphs that must be sharded across many machines today",
-    "Write-heavy workloads with many concurrent writers",
     "RDF/SPARQL workloads",
     "Teams that require an open-source server"
   ],
@@ -196,7 +193,9 @@
     "https://galactusdb.com/docs/operations/licensing",
     "https://galactusdb.com/docs/integrations/bolt",
     "https://hub.docker.com/r/ianknowles/galactus-db/tags",
-    "https://galactusdb.com/nebula"
+    "https://galactusdb.com/nebula",
+    "https://galactusdb.com/docs/types/spatial-shapes",
+    "https://galactusdb.com/docs/tables"
   ],
   "lastVerified": "2026-11-26"
 }
