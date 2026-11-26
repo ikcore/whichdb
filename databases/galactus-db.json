@@ -5,8 +5,8 @@
     "GDB",
     "GalactusDB"
   ],
-  "tagline": "Rust graph database speaking Cypher over Bolt, with SQL tables and vector search in the same engine.",
-  "description": "Galactus DB is a property-graph database written in Rust that speaks Cypher over the Bolt protocol, so the official Neo4j drivers connect and Neo4j 4.x and 5.x dump files import directly. A node property can hold a typed table that is queried and changed with SQL (joins, window functions, recursive CTEs) inside a Cypher statement and the same transaction as the graph. Vector, full-text and spatial indexes, GDS-style graph algorithms, APOC utilities, change streams and an MCP server for AI agents are built in. It ships as a container image of about 5 MB for Linux AMD64 and ARM64. Each instance runs on one server with replicas for reads; the free Community edition is licensed for production use, with Commercial and Enterprise sold per core.",
+  "tagline": "The frontier database: graphs, SQL tables and vector search in one Rust server, speaking Cypher over Bolt.",
+  "description": "Galactus DB is a frontier database: graphs, SQL tables and vector search in one server, built to what the hardware allows. It challenges the idea that a scalable database has to be heavyweight, expensive or spread across services: one container image of about 5 MB holds a property-graph engine written in Rust that speaks Cypher over Bolt, typed SQL tables on nodes and relationships (joins, window functions, recursive CTEs) in the same transaction as the graph, and vector, full-text and spatial indexes. Graph algorithms, APOC utilities, change streams, a scheduler, users and roles, TLS and an MCP server for AI agents come out of the box, with no plugins. In its open benchmark against five other graph databases it is the fastest in its class on every query measured, from point lookups to weighted shortest paths. Instances run on one server with read replicas, and Nebula Cluster (early access) adds high availability, automatic failover and property sharding. The free Community edition is licensed for production; Commercial and Enterprise are sold per core.",
   "productType": "engine",
   "status": "active",
   "maturity": "emerging",
@@ -132,17 +132,17 @@
     "wasm": false
   },
   "strengths": [
+    "Fastest in its class in an open benchmark against five graph databases: 0.073 ms point lookups and 113,600 lookups/s on 8 CPUs (2.5.3, i9-13900K)",
     "Typed SQL tables on nodes and relationships, queried with SQL (joins, window functions, recursive CTEs) inside Cypher in the same transaction",
     "GIS built in: WGS-84 points plus geometry and geography shapes from WKT, WKB and GeoJSON, with spatial indexes and shortest-path routing",
     "Nebula Cluster (early access) adds high availability with automatic failover; apps keep their Bolt driver and bolt:// address",
-    "Vector search, FastRP embeddings and an MCP server for GraphRAG and AI agents, all in the same engine as the graph",
-    "Bolt and Cypher: official Neo4j drivers connect, and Neo4j 4.x/5.x .dump files import without a Neo4j install",
-    "Built-in GDS-style algorithms, APOC utilities, change streams and a constraint-based scheduler (gdb.schedule)",
+    "Feature-rich out of the box: vector search, FastRP, graph algorithms, APOC, change streams, a scheduler and an MCP server, no plugins",
+    "Cypher over Bolt: existing Bolt drivers and tools connect, and Neo4j 4.x/5.x .dump files import directly",
     "Container image of about 5 MB for Linux AMD64 and ARM64; the free Community edition runs in production with no licence key"
   ],
   "weaknesses": [
     "The server is closed source; only the drivers are open source (Apache-2.0)",
-    "Young project with a small community and few third-party tools beyond the Neo4j ecosystem",
+    "Young project with a small community and few third-party tools beyond the Cypher and Bolt ecosystem",
     "Released instances scale up, not out: the cluster edition is in early access"
   ],
   "useCases": [
@@ -151,7 +151,7 @@
     "Route finding and shortest paths on road networks",
     "Recommendations and fraud detection",
     "Scheduling and resource planning on graph data",
-    "Moving existing Neo4j applications to a smaller footprint"
+    "Consolidating graph, relational and vector data into one server"
   ],
   "notIdealFor": [
     "RDF/SPARQL workloads",
@@ -188,6 +188,7 @@
     "color": "#C5F03A"
   },
   "sources": [
+    "https://galactusdb.com/compare",
     "https://galactusdb.com/llms.txt",
     "https://galactusdb.com/docs/operations/licensing",
     "https://galactusdb.com/docs/integrations/bolt",
